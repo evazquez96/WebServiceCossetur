@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/08/2018 10:10:13 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.cosettur.models.pojo.Usuario" table="Usuario" catalog="COSSETURdb" optimistic-lock="version">
+        <id name="usuario" type="string">
+            <column name="usuario" length="20" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="30" not-null="true" />
+        </property>
+        <property name="pass" type="string">
+            <column name="pass" length="32" not-null="true" />
+        </property>
+        <property name="telefono" type="string">
+            <column name="telefono" length="15" not-null="true" unique="true" />
+        </property>
+        <property name="correo" type="string">
+            <column name="correo" length="35" not-null="true" unique="true" />
+        </property>
+    </class>
+</hibernate-mapping>
