@@ -46,6 +46,9 @@ Contributor(s):
     <property name="hibernate.connection.url">jdbc:mysql://201.150.40.239:3306/COSSETURdb?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">AGIvft17330</property>
+    <property name="connection.autoReconnect">true</property>
+    <property name="connection.autoReconnectForPools">true</property>
+    <property name="connection.is-connection-validation-required">true</property>
     <mapping resource="com/cosettur/models/pojo/Usuario.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

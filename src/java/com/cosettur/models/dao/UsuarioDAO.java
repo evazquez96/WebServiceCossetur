@@ -13,6 +13,7 @@ public class UsuarioDAO {
     public static int loginUsuario(String user,String pass){
         SessionFactory sf=null;
         Session session=null;
+        
         int r=0;
         try{
             sf=HibernateUtil.getSessionFactory();
@@ -64,12 +65,12 @@ public class UsuarioDAO {
             session.save(user);
             tx.commit();
             bandera=1;
-            session.close();
         }catch(Exception e){
             bandera=0;
             tx.rollback();
             System.out.println(e.toString());
         }finally{
+            session.close();
             return bandera;
         }
     }
